@@ -26,6 +26,7 @@ namespace cd_c_bankAccounts
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<MyContext>(options => options.UseMySql(Configuration["DBInfo:ConnectionString"]));
+            services.AddSession();
             services.AddMvc(options => options.EnableEndpointRouting = false);
         }
 

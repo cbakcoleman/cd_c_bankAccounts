@@ -1,0 +1,57 @@
+@model cd_c_bankAccounts.Models.LoginUser
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <title>Login</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col">
+                <h5>Login to your (not-a-scam) Bank Account!</h5>
+            </div>
+            <div class="col">
+                <p>To create an account, <a href="/">Register here.</a>
+                </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <form asp-action="login" asp-controller="home">
+                <div class="col m-1 card p-3">
+                    <div class="row">
+                        <div class="col">
+                            <div>
+                                <span asp-validation-for="Email"></span>
+                            </div>
+                            <div>
+                                <label asp-for="Email"></label>
+                                <input asp-for="Email" class="form-control">
+                            </div>
+
+                            <div>
+                                <span asp-validation-for="Password"></span>
+                            </div>
+                            <div>
+                                <label asp-for="Password"></label>
+                                <input asp-for="Password" class="form-control">
+                            </div>
+
+                            <div>
+                                <input type="submit" value="Login" class="btn btn-outline-dark mt-3">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+
+    </div>
+</body>
+</html>
